@@ -34,6 +34,7 @@ public static void main (String args[]) throws NumberFormatException, IOExceptio
 int n = Integer.parseInt(input.readLine());*/
 String [] array = new String[5];
 
+
 for (i=0;i<5;i++)
 {
 array[i] ="i";	
