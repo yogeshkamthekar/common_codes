@@ -1,0 +1,14 @@
+Selenium Grid - 
+HUB - It is computer which acts as server machine where we can load our tests.  
+We need to have selenium standalone jar to be downloaded(example-3.3.1) for the same
+execute below command where we have above standalone jar present-
+java -jar  selenium-server-standalone-3.3.1.jar-role hub -port 4444
+port 4444 is default port 
+NODE-similar steps needed to have node setup done and also install selenium standalone jar on that node machine
+execute below command where we have above standalone jar present-
+java -jar selenium-server-standalone-3.3.1.jar - role node -port 5555 -hub http://123.456.7.89:4444.
+We should be getting option as 'the node is registered to hub and ready to use'
+once all setup is done as above , in your test code use remote browser and execute as below -
+Webdriver driver;
+driver = new RemoteWebDriver(new URL(" http://HUB machine IP Address:Hub Port/wd/hub"),capability);
+
